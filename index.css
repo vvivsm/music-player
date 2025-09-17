@@ -1,0 +1,128 @@
+body {
+    display: flex;
+    background: #95bedc;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+.music-player {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 20rem;
+    text-align: center;
+}
+
+.song-info {
+    margin-bottom: 30px;
+}
+
+.cover-image {
+    width: 13rem;
+    height: 13rem;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.cover-image:hover {
+    transform: scale(1.05);
+}
+
+.song-title {
+    font-family: "Varela Round", sans-serif;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.song-artist {
+    font-family: "Varela Round", sans-serif;
+    font-size: 16px;
+    color: #666;
+    font-weight: 300;
+}
+
+.progress-container {
+    margin: 30px 0;
+}
+
+.progress-track {
+    position: relative;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #9AC7E7;
+    border-radius: 3px;
+    width: 0%;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-btn {
+    background: #9AC7E7;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.play-btn:hover {
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+.control-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.play-btn .control-icon {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+}
+
+.cover-image {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
